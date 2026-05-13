@@ -1090,6 +1090,32 @@ TESTIMONIALS SECTION
 .social.email:hover { color: #ffcc00; }
   
     
+   /* TESTIMONIAL DARK OVERLAY (ALL SCREENS) */
+.testimonials {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+/* Dark layer */
+.testimonials::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* adjust darkness here */
+    z-index: 1;
+}
+
+/* Keep content above overlay */
+.testimonials .container {
+    position: relative;
+    z-index: 2;
+} 
+    
+    
+    
+    
         
     </style>
 </head>
