@@ -1115,7 +1115,7 @@
 
         <div class="visitor-box">
           <h3><i class="fas fa-eye"></i> Total Visits</h3>
-            <h6 id="visitor-count">Loading...</h6>
+            <h6 id="visitor-count">0</h6>
         </div>
 
         <p class="copyright">
@@ -1267,11 +1267,26 @@ const observer = new IntersectionObserver((entries, observer) => {
 
 observer.observe(document.querySelector('.stats'));
 
-fetch("https://api.countapi.xyz/hit/ezekiel-pencil-art/visits")
-.then((res) => res.json())
-.then((data) => {
+
+fetch("https://api.countapi.xyz/hit/greatgod-ezekiel-art/visits")
+
+.then(response => response.json())
+
+.then(data => {
+
     document.getElementById("visitor-count").innerText = data.value;
+
+})
+
+.catch(error => {
+
+    document.getElementById("visitor-count").innerText = "0";
+
+    console.log(error);
+
 });
+
+
 
 </script>
 
