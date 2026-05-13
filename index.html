@@ -678,6 +678,33 @@
         font-size: 2.3rem;
     }
 }
+
+.visitor-box img{
+    filter: brightness(1.1);
+    border-radius: 6px;
+}
+  .counter-wrapper{
+    display: inline-block;
+    background: #000;
+    padding: 8px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+    margin-top: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* make counter smaller and tighter */
+.counter-wrapper img{
+    height: 26px;
+    width: auto;
+    display: block;
+    filter: brightness(1.1;
+}
+
+/* optional: improve spacing in footer */
+.visitor-box{
+    text-align: center;
+}
     
         
         
@@ -1113,10 +1140,21 @@
             <a href="#contact">Contact</a>
         </div>
 
-        <div class="visitor-box">
-          <h3><i class="fas fa-eye"></i> Total Visits</h3>
-            <h6 id="visitor-count">0</h6>
-        </div>
+<div class="visitor-box">
+    <h3><i class="fas fa-eye"></i> Views From Visitors</h3>
+
+    <div class="counter-wrapper">
+        <!-- hitwebcounter Code START -->
+        <a href="https://www.hitwebcounter.com/" target="_blank" rel="noopener" title="Free Counter">
+            <img 
+                src="https://www.hitwebcounter.com/counter/counter.php?page=21497748&style=0001&nbdigits=1&type=page"
+                alt="Free Counter"
+                style="border:0;max-width:100%;height:auto;"
+            />
+        </a>
+        <!-- hitwebcounter Code END -->
+    </div>
+</div>
 
         <p class="copyright">
             © 2026 Ezekiel Pencil Art. Handcrafted Excellence. All Rights Reserved.
