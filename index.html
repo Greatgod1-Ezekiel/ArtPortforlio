@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezekiel Pencil Art | Turning Imagination Into Timeless Art</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #ffffff;
+            --text-dim: #b3b3b3;
+            --accent: #d4af37;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* HERO SECTION - FIXED SYNTAX */
+        .hero {
+            text-align: left;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            /* Ensure the image path '8.jpg' is exactly the same as your file name */
+            background: linear-gradient(to right, rgba(0,0,0,0.85), rgba(0,0,0,0.2)), url('88.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+
+        /* Laptop View: Move text to left and show more image */
+        @media (min-width: 992px) {
+            .hero {
+                background-position: right center; /* Shows the subject of the art better */
+            }
+            .hero .container {
+                margin-left: 0;
+                padding-left: 8%;
+                max-width: 600px; /* Forces write-up to stay on the left side */
+            }
+        }
+
+        .main-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .sub-heading {
+            font-size: 1.1rem;
+            color: var(--accent);
+            max-width: 800px;
+            margin-bottom: 25px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .hero-description {
+            margin-bottom: 35px;
+            color: var(--text-dim);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .hero-buttons .btn {
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn.primary { background: var(--text-main); color: #000; }
+.btn.secondary {
+    border: 1px solid var(--text-main);
+    color: var(--text-main);
+    background: transparent;
+}
+
+.btn.secondary:hover {
+    background: var(--accent);
+    color: #000;
+}
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.4); }
+        
+        /* TAGS & TITLES */
+        .small-tag {
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 0.75rem;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        /* ABOUT SECTION */
+        .about-content {
+            max-width: 850px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        .follow-me {
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .social-link {
+            color: var(--text-main);
+            font-size: 1.2rem;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .social-link:hover { color: var(--accent); transform: scale(1.1); }
+
+        /* SERVICES GRID */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+/* WHAT YOU GET SECTION - LIGHT THEME */
+.what-you-get-section {
+    background-color: #ffffff; /* White background */
+    color: #121212; /* Black text */
+    padding: 80px 0;
+}
+
+.what-you-get-section .section-title, 
+.what-you-get-section h3, 
+.what-you-get-section strong {
+    color: #121212 !important;
+}
+
+.get-list li {
+    margin-bottom: 25px;
+    position: relative;
+    padding-left: 0; /* Remove padding since bullet is gone */
+    color: #444;
+    line-height: 1.8;
+    list-style: none; /* Removes default bullets */
+}
+
+/* REMOVING THE YELLOW DOT */
+.get-list li::before {
+    display: none; /* This removes the yellow dot entirely */
+}
+
+/* IMAGE GRID REFINEMENT */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.grid-item {
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px; /* Base height for small images */
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* The Two Large Images */
+.grid-item.large {
+    grid-column: span 2;
+    grid-row: span 2;
+    height: 615px; /* Spans height of two small rows + gap */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-item.large {
+        height: 400px;
+    }
+    .grid-item {
+        height: 250px;
+    }
+    
+
+}
+        
+   /* PRICING SECTION STYLES */
+        .pricing-section {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('1313.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 100px 0;
+            color: #fff;
+        }
+
+        .pricing-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-intro {
+            font-size: 15px;
+            line-height: 2;
+            color: var(--text-dim);
+            margin-bottom: 40px;
+        }
+
+        .pricing-details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .price-category h3 {
+            font-family: var(--font-heading);
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            padding-bottom: 10px;
+        }
+
+        .price-category p {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #e0e0e0;
+        }
+
+        .pricing-footer-note {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px dashed var(--accent);
+            margin-top: 40px;
+        }
+
+        .pricing-image-container {
+            margin-top: 60px;
+            width: 100%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .pricing-image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-details-grid { grid-template-columns: 1fr; }
+        }
+
+
+
+        .card {
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 15px;
+            border: 1px solid #2a2a2a;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover { border-color: var(--accent); background: #252525; }
+
+        .card h3 {
+            font-family: var(--font-heading);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            color: var(--accent);
+        }
+
+        .card p { 
+            color: var(--text-dim);
+            font-size: 0.85rem;
+            line-height: 1.7;
+        }
+
+        /* STATS SECTION */
+        .stats { background: #000; padding: 50px 0; border-top: 1px solid #222; border-bottom: 1px solid #222; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+
+        .stat-item h2 { font-family: var(--font-heading); font-size: 2.2rem; color: var(--accent); margin-bottom: 5px; }
+        .stat-item p { text-transform: uppercase; font-size: 0.65rem; letter-spacing: 2px; color: var(--text-dim); }
+
+        /* PROCESS STEP LIST */
+        .process-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .step { border-left: 2px solid var(--accent); padding-left: 25px; }
+        .step h3 { margin-bottom: 10px; font-family: var(--font-heading); font-size: 1.15rem; }
+        .step p { font-size: 0.85rem; color: var(--text-dim); line-height: 1.6; }
+
+        /* FAQ */
+        .faq-item {
+            background: #1a1a1a;
+            margin-bottom: 15px;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 0 solid var(--accent);
+            transition: 0.3s;
+        }
+        .faq-item:hover { border-left-width: 4px; padding-left: 21px; }
+
+        .faq-item strong { display: block; margin-bottom: 10px; color: var(--accent); font-size: 1rem; }
+        .faq-item p { font-size: 0.9rem; color: var(--text-dim); line-height: 1.7; }
+
+        /* FOOTER */
+        footer {
+            background: #0a0a0a;
+            height: 300px;
+            padding: 70px 0 40px;
+            border-top: 1px solid #222;
+            text-align: center;
+        }
+
+        .footer-links { margin: 25px 0; }
+        .footer-links a { color: var(--text-dim); text-decoration: none; margin: 0 15px; font-size: 0.85rem; transition: 0.3s; }
+        .footer-links a:hover { color: var(--text-main); }
+        .copyright { color: #444; font-size: 0.75rem; margin-top: 40px; letter-spacing: 1px; }
+
+        @media (max-width: 900px) {
+            .about-content, .stats-grid { grid-template-columns: 1fr; gap: 30px; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .section-title { font-size: 1.8rem; }
+            .hero-buttons { flex-direction: column; align-items: flex-start; }
+            .hero { padding-top: 100px; }
+        }
+        
+        /* =========================
+   SCROLL REVEAL ANIMATIONS
+========================= */
+
+/* =========================
+   SCROLL REVEAL ANIMATIONS
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(90px);
+    transition:
+        opacity 1.1s ease,
+        transform 1.1s ease;
+    will-change: transform, opacity;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hero Animation */
+.hero .container {
+    opacity: 0;
+    transform: translateY(60px);
+    animation: heroReveal 1.8s ease forwards;
+}
+
+@keyframes heroReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Artistic Philosophy Section */
+.philosophy-section {
+    background: #ffffff;
+    color: #121212;
+    padding: 110px 0;
+}
+
+.philosophy-content {
+    max-width: 950px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.philosophy-section .small-tag {
+    color: #888;
+}
+
+.philosophy-section .section-title {
+    color: #121212;
+}
+
+.philosophy-text {
+    font-size: 14px;
+    line-height: 2;
+    color: #444;
+    margin-top: 30px;
+}
+
+.philosophy-highlight {
+    margin-top: 50px;
+    padding: 35px;
+    border: 1px solid rgba(0,0,0,0.08);
+    border-radius: 18px;
+    background: #fafafa;
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #121212;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+}
+        /* =========================
+   FEATURED MASTERPIECE
+========================= */
+
+.masterpiece-section {
+    position: relative;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.82)),
+        url('alex-otti-art.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.masterpiece-content {
+    max-width: 850px;
+}
+
+.masterpiece-section .small-tag {
+    color: var(--accent);
+}
+
+.masterpiece-section .section-title {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.masterpiece-description {
+    color: #d0d0d0;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 50px;
+    max-width: 760px;
+}
+
+.masterpiece-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.masterpiece-card {
+    background: rgba(255,255,255,0.04);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 18px;
+    padding: 30px;
+    transition: 0.4s ease;
+}
+
+.masterpiece-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--accent);
+}
+
+.masterpiece-card h3 {
+    font-family: var(--font-heading);
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.masterpiece-card p {
+    color: #d5d5d5;
+    line-height: 1.8;
+    font-size: 0.9rem;
+}
+
+.masterpiece-image {
+    margin-top: 70px;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.masterpiece-image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.6s ease;
+}
+
+.masterpiece-image img:hover {
+    transform: scale(1.03);
+}
+
+/* =========================
+   FLOATING WHATSAPP BUTTON
+========================= */
+
+.floating-whatsapp {
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    text-decoration: none;
+    z-index: 9999;
+    box-shadow:
+        0 0 10px rgba(37, 211, 102, 0.7),
+        0 0 25px rgba(37, 211, 102, 0.5),
+        0 0 45px rgba(37, 211, 102, 0.3);
+    animation: whatsappFloat 2s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.12);
+    box-shadow:
+        0 0 15px rgba(37, 211, 102, 0.9),
+        0 0 35px rgba(37, 211, 102, 0.7),
+        0 0 60px rgba(37, 211, 102, 0.5);
+}
+
+/* Floating Motion */
+
+@keyframes whatsappFloat {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Optimization */
+
+@media (max-width: 768px) {
+
+    .floating-whatsapp {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+        bottom: 20px;
+        right: 15px;
+    }
+}
+        
+        
+    </style>
+</head>
+<body>
+
+    <section class="hero reveal">
+        <div class="container">
+                    <span class="small-tag" style="color: var(--text-main); opacity: 0.6;font-size: 19px; margin-bottom: 5px;">Ezekiel Pencil Art</span>
+            <h1 class="main-heading">Turning Imagination <br> Into Timeless Art.</h1>
+            <h2 class="sub-heading">Professional Hyper-Realistic Pencil & Digital Artist</h2>
+            <p class="hero-description">
+                Art is more than a visual experience; it is the preservation of a legacy. I specialize in merging 
+                traditional charcoal techniques with modern digital precision to create portraits that don't 
+                just look like the subject, but feel like them. Every stroke is an intentional step toward 
+                capturing the soul behind the reference.
+            </p>
+            <div class="hero-buttons">
+            
+                <a href="#contact" class="btn secondary">Commission Your Piece</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about reveal" id="about">
+        <div class="container">
+            <span class="small-tag">THE ARTIST BEHIND THE PENCIL</span>
+            <h2 class="section-title">A Journey of Precision, Passion, <br>and Creative Storytelling.</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>My name is <strong>Ezekiel GreatGod</strong>, and my creative journey is rooted in a deep fascination with the human form and the stories etched into every expression. Over the years, I have refined a signature style that balances the raw, textured beauty of charcoal with the polished, infinite possibilities of digital illustration.</p>
+                    
+                    <p>As a specialist in <strong>Hyper-Realistic Pencil Art</strong>, I believe that the difference between a drawing and a masterpiece lies in the details—the subtle glint in an eye, the softness of a shadow, or the intricate texture of skin. My process is meditative and disciplined, often spending dozens of hours on a single piece to ensure that proportions are flawless and the emotional depth is palpable.</p>
+                    
+                    <p>In the <strong>Digital Realm</strong>, I break traditional boundaries. Using advanced tools, I transform photographs into vibrant paintings and conceptual designs. Whether I am working on a mobile-based environment or a high-resolution desktop setup, my goal remains the same: to deliver professional-grade visual storytelling that resonates with influencers, brands, and private collectors alike.</p>
+                    
+                    <p>Based in Nigeria, I draw inspiration from the vibrant energy and diverse faces surrounding me, delivering world-class art to clients globally. When you commission a piece, you aren't just buying a drawing; you are investing in a handcrafted memory designed to last a lifetime.</p>
+                    
+                    <div class="follow-me">
+                        <strong>Join the Journey:</strong>
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/234XXXXXXXXXX" class="social-link"><i class="fab fa-whatsapp"></i></a>
+            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="what-you-get-section reveal">
+    <div class="container">
+        <span class="small-tag">The Experience</span>
+        <h2 class="section-title">What You Get</h2>
+        
+        <ul class="get-list">
+    <li>
+        <strong>Masterful Hyper-Realistic Execution</strong>
+        Every detail, hair follicle, and light reflection is meticulously rendered using a combination of professional-grade charcoal and graphite pencil to ensure a photographic finish with deep, rich blacks.
+    </li>
+    <li>
+        <strong>Bespoke Digital Artistry & Precision</strong>
+        For digital paintings, you receive high-resolution files in multiple formats (PNG, JPEG, PDF), optimized for high-end canvas printing or digital display without any pixelation.
+    </li>
+    <li>
+        <strong>Archival-Grade Longevity</strong>
+        Physical works are created on 100% acid-free, museum-quality Needle point or Gloxy paper. This ensures your artwork will not yellow, brittle, or fade, preserving your legacy.
+    </li>
+    <li>
+        <strong>Advanced Anatomical Accuracy</strong>
+        Using professional grid-scaling and freehand mapping, I ensure that every facial feature from the glint in the iris to the structure of the jawline is a 1:1 perfect representation of the reference.
+    </li>
+    <li>
+        <strong>Tailored Creative Consultation</strong>
+        You get a dedicated design phase where we discuss background options, lighting adjustments, and "idealized" edits (such as removing blemishes or combining multiple photos into one scene).
+    </li>
+    <li>
+        <strong>Multi-Layered Shading & Depth</strong>
+        Unlike standard sketches, I sometimes use a multi-layer blending technique that creates a 3D pop effect, making the portrait appear as if it is breathing and stepping off the paper.
+    </li>
+    <li>
+        <strong>Progress Transparency (WIP Updates)</strong>
+        Stay involved in the artistic journey. I provide high-quality "Work-in-Progress" shots at major milestones, ensuring you are 100% satisfied with the direction before the final details are set.
+    </li>
+    <li>
+        <strong>Emotional Essence Capture</strong>
+        My goal isn't just to copy a photo, but to capture the *character*. I focus heavily on the "window of the soul"the eyes to ensure the emotional weight of the person is felt by anyone who views the piece.
+    </li>
+    <li>
+        <strong>Legacy Restoration & Enhancement</strong>
+        The unique ability to take old, damaged, or low-resolution family photos from decades ago and "re-imagine" them into sharp, detailed, and vibrant artworks that honor your ancestors.
+    </li>
+    <li>
+        <strong>Professional Fixative Protection</strong>
+        Every physical piece is treated with a professional, non-yellowing matte fixative spray that protects the charcoal from smudging, dust, and UV light exposure.
+    </li>
+    <li>
+        <strong>Global Shipping & Secure Logistics</strong>
+        Your art is packaged in moisture-proof, industrial-strength reinforced tubes or flat-boxes to ensure it reaches your doorstep in Nigeria or anywhere worldwide in pristine condition.
+    </li>
+    <li>
+        <strong>Full Commercial & Branding Rights</strong>
+        For influencers and brands, you receive a license for commercial use, allowing you to use the art for merchandise, profile branding, book covers, or promotional marketing campaigns.
+    </li>
+    <li>
+        <strong>Certificate of Authenticity</strong>
+        Every original commission is accompanied by a hand-signed document verifying the artist, increasing its value as a collector's item.
+    </li>
+    <li>
+        <strong>Post-Delivery Support</strong>
+        Guidance on the best framing practices, glass types (such as anti-reflective or UV-filter glass), and lighting setups to make your artwork the focal point of any room.
+    </li>
+</ul>
+        <div class="image-grid">
+            <div class="grid-item large">
+                <img src="1.jpg" alt="Featured Art">
+            </div>
+            
+            <div class="grid-item">
+                <img src="55.png" alt="Detail View">
+            </div>
+            <div class="grid-item">
+                <img src="77.png" alt="Detail View">
+            </div>
+
+            <div class="grid-item">
+                <img src="33.png" alt="Detail View">
+            </div>
+            <div class="grid-item">
+                <img src="22.png" alt="Detail View">
+            </div>
+         <div style="text-align: center; margin-top: 30px;">
+    <a href="gallery.html" class="btn primary" style="
+        display: inline-block; 
+        text-decoration: none; 
+        padding: 10px 24px; 
+        border-radius: 70px; 
+        background: #121212; 
+        color: #fff; 
+        width: 200px;
+        font-size: 0.75rem; 
+        letter-spacing: 0.5px; 
+        font-weight: 600;
+        text-transform: uppercase;">
+        Explore My Gallery
+    </a>
+</div>
+            
+            
+        </div>
+    </div>
+</section>
+
+
+    <section class="services reveal" id="services">
+        <div class="container">
+            <span class="small-tag">MY EXPERTISE</span>
+            <h2 class="section-title">Specialized Creative Solutions</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Hyper-Realistic Portraits</h3>
+                    <p>The pinnacle of traditional art. I use premium charcoal and graphite pencils to create lifelike portraits with incredible depth. These pieces focus on extreme detailing, utilizing grid systems for perfect proportions and smooth blending techniques to achieve a photographic finish on paper.</p>
+                </div>
+                <div class="card">
+                    <h3>Advanced Digital Painting</h3>
+                    <p>Transforming your favorite moments into digital masterpieces. This service is perfect for those who want a modern aesthetic. I provide high-resolution files suitable for large-scale printing, social media profiles, or digital decor, ensuring clean lines and vibrant color grading.</p>
+                </div>
+                <div class="card">
+                    <h3>Legacy & Memorial Art</h3>
+                    <p>Honoring the past with dignity. I specialize in creating emotional tribute pieces from old or low-quality reference photos. By reconstructing details and adding artistic depth, I help families preserve the memory of their loved ones in a way that feels timeless and respectful.</p>
+                </div>
+                <div class="card">
+                    <h3>Brand & Influencer Visuals</h3>
+                    <p>Standing out in a crowded digital space. I create stylized illustrations and custom avatars for creators and brands. These artworks are designed to be eye-catching, unique, and reflective of your personal brand identity, helping you connect more deeply with your audience.</p>
+                </div>
+              
+                <div class="card">
+                    <h3>Gift & Anniversary Pieces</h3>
+                    <p>The ultimate personal gift. Nothing says "thoughtful" like a hand-drawn artwork. I work closely with you to include specific elements, backgrounds, or themes that make the artwork a deeply personal and cherished gift for birthdays, weddings, or milestones.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section class="stats reveal">
+    <div class="container">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h2 class="counter" data-target="50">0</h2>
+                <p>Artworks Completed</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="25">0</h2>
+                <p>Clients</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="3">0</h2>
+                <p>Years of Mastery</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="100">0</h2>
+                <p>Passion Driven (%)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="process reveal">
+        <div class="container">
+            <span class="small-tag">THE ARTISTIC PIPELINE</span>
+            <h2 class="section-title">A Transparent Path from <br>Sketch to Masterpiece.</h2>
+            <div class="process-list">
+                <div class="step">
+                    <h3>01. Creative Consultation</h3>
+                    <p>We begin by discussing your vision. You provide the reference photos, and we talk about the size, medium (pencil or digital), and any specific emotional "vibe" you want the piece to convey.</p>
+                </div>
+                <div class="step">
+                    <h3>02. Technical Planning</h3>
+                    <p>I analyze the composition. For pencil works, this involves setting up precise grids. For digital works, I map out the color palette and lighting to ensure the final result is balanced and professional.</p>
+                </div>
+                <div class="step">
+                    <h3>03. Meticulous Execution</h3>
+                    <p>The actual creation phase. I build layers of graphite or digital paint, focusing first on form and then on the hyper-fine details that make the artwork pop. I prioritize quality over speed during this stage.</p>
+                </div>
+                <div class="step">
+                    <h3>04. Review & Final Delivery</h3>
+                    <p>Once finished, I present the work for a final review. After any minor refinements, the artwork is professionally packaged or exported in high-definition formats and delivered to you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq reveal">
+        <div class="container">
+            <span class="small-tag">FAQS</span>
+            <h2 class="section-title">Everything You Need to Know</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <strong>What is the difference between your pencil and digital services?</strong>
+                    <p>Pencil portraits are physical artworks hand-drawn on premium paper—they offer a classic, textured feel. Digital art is created on a tablet, resulting in a versatile digital file that can be used online or printed on various materials like canvas, wood, or metal multiple times.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>Can you work with old or blurry photographs?</strong>
+                    <p>Yes, I frequently work on "restoration" style portraits. While a clear photo is always better, I can use my artistic knowledge of anatomy and lighting to reconstruct details that might be missing from an older or lower-quality reference image.</p>
+                </div>
+                <div class="faq-item">
+                    <strong>How long does a typical commission take to complete?</strong>
+                    <p>Quality takes time. A standard portrait usually takes 7 to 14 days depending on the complexity and my current schedule. If you have a specific deadline (like a birthday), please let me know during the consultation so I can prioritize your project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="pricing-section reveal" id="pricing">
+        <div class="container">
+            <span class="small-tag">INVESTMENT</span>
+            <h2 class="section-title">Pricing & Commission Value</h2>
+            
+            <div class="pricing-content">
+                <div class="pricing-intro">
+                    <p>
+                        Commissioning a custom artwork is an investment in a legacy that transcends time. My pricing structure is not merely a reflection of materials used, but a valuation of the <strong>dozens of hours</strong> of meticulous labor, technical expertise, and the emotional depth infused into every stroke. Whether it is a hand-drawn charcoal portrait or a high-end digital painting, each piece is treated as a museum-grade project.
+                    </p>
+                    <p>
+                        I believe in transparency and quality. Because every face tells a different story and every request carries unique complexities ranging from the number of subjects to the intricacy of the background prices are tailored to the specific needs of your project. Below is a breakdown of how I value my craftsmanship.
+                    </p>
+                </div>
+
+                <div class="pricing-details-grid">
+                    <div class="price-category">
+                        <h3>Pencil & Charcoal Works</h3>
+                        <p>Physical commissions are priced based on size (A4, A3, A2, or custom mural sizes) and the level of hyper-realism required. A single-subject A3 portrait, for instance, requires intensive layering of graphite and carbon to achieve that signature "3D pop."</p>
+                        <p>Factors that influence the final quote include the complexity of clothing (like lace or patterned traditional attire), jewelry details, and whether the background is simple or fully rendered.</p>
+                    </div>
+                    <div class="price-category">
+                        <h3>Digital Masterpieces</h3>
+                        <p>Digital art offers incredible flexibility. Pricing for these sessions covers the creation of high-resolution source files (300 DPI) and the commercial licensing rights often required by influencers and brands.</p>
+                        <p>Since digital works can be reproduced on various surfaces, the cost covers the artistic time spent on color grading, digital "brushwork," and ensuring the file is optimized for large-format canvas printing without loss of quality.</p>
+                    </div>
+                </div>
+
+                <div class="pricing-footer-note">
+                    <p><strong>Note on Custom Projects:</strong> For memorial restorations, multi-subject family trees, or conceptual brand illustrations, I provide a bespoke quote after our initial consultation. A commitment deposit is required to secure your slot in my artistic pipeline, ensuring dedicated time is reserved exclusively for your masterpiece.</p>
+                </div>
+
+                <div class="pricing-image-container">
+                    <img src="a.png" alt="Artistic Process and Pricing Showcase">
+                </div>
+
+                <div style="text-align: center; margin-top: 50px;">
+                    <p style="margin-bottom: 20px; color: var(--accent);">Ready for a personalized quote?</p>
+                                            <a href="https://wa.me/234XXXXXXXXXX" class="social-link"><i class="fab fa-whatsapp"></i><br>Request Price List</br></a>
+                    
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="philosophy-section reveal">
+    <div class="container">
+        <div class="philosophy-content">
+
+            <span class="small-tag">ARTISTIC PHILOSOPHY</span>
+
+            <h2 class="section-title">
+                Art Should Preserve More Than Appearance.
+            </h2>
+
+            <p class="philosophy-text">
+                I believe great art should not simply recreate a face it should preserve emotion, memory, presence, and identity. Every portrait I create is approached with patience, precision, and intentionality because I understand that behind every commission is a story that matters deeply to someone.
+            </p>
+
+            <p class="philosophy-text">
+                Whether I am drawing a loved one, creating a memorial portrait, or designing a digital masterpiece, my focus is always centered on emotional connection. The goal is not just realism, but emotional realism creating artwork that allows people to feel something every time they look at it.
+            </p>
+
+            <p class="philosophy-text">
+                In a world filled with instant content and artificial generation, handcrafted art still carries something irreplaceable: human patience, imperfections, dedication, and soul. Every shadow blended, every texture rendered, and every highlight placed represents hours of focused craftsmanship that cannot be automated.
+            </p>
+
+            <div class="philosophy-highlight">
+                “A portrait should not only remind you of someone’s face it should remind you of their presence.”
+            </div>
+
+        </div>
+    </div>
+</section>
+    
+    <section class="masterpiece-section reveal">
+
+    <div class="container">
+
+        <div class="masterpiece-content">
+
+            <span class="small-tag">
+                FEATURED MASTERPIECE
+            </span>
+
+            <h2 class="section-title">
+                “Example Of Leadership”
+            </h2>
+
+            <p class="masterpiece-description">
+                This portrait was created as a tribute to the Executive Governor of Abia State, <strong>Dr. Alex Otti</strong>, whose leadership and developmental vision have continued to inspire many across the state and beyond. Through this artwork, I wanted to capture not only his physical appearance, but also the sense of determination, calm strength, and progressive energy that has defined his administration.
+            </p>
+
+            <p class="masterpiece-description">
+                Over the past few years, Abia State has witnessed visible transformation in infrastructure, road development, environmental sanitation, governance structure, and public confidence. This piece reflects the spirit of renewal and leadership that many people associate with his administration. Every detail in the portrait was intentionally crafted to communicate authority, vision, and resilience.
+            </p>
+
+            <div class="masterpiece-grid">
+
+                <div class="masterpiece-card">
+                    <h3>Hours Invested</h3>
+
+                    <p>
+                        This artwork required over 10 hours of detailed pencil rendering, layering, shading refinement, and structural corrections to achieve a hyper-realistic finish worthy of a leadership tribute piece.
+                    </p>
+                </div>
+
+                <div class="masterpiece-card">
+                    <h3>Materials Used</h3>
+
+                    <p>
+                        The portrait was created using professional graphite pencils, charcoal pencils, blending tools, precision erasers, and premium textured paper designed for archival-quality realism and long-term preservation.
+                    </p>
+                </div>
+
+                <div class="masterpiece-card">
+                    <h3>Meaning Behind The Artwork</h3>
+
+                    <p>
+                        Beyond realism, this piece symbolizes progress, discipline, and transformation. The intention was to create a portrait that represents leadership with depth and emotional presence rather than simply recreating a photograph.
+                    </p>
+                </div>
+
+                <div class="masterpiece-card">
+                    <h3>Creative Challenges</h3>
+
+                    <p>
+                        One of the greatest challenges was balancing hyper-realistic detailing while preserving natural expression and emotional authenticity. Achieving proper skin texture, fabric depth, and realistic lighting required multiple refinement stages.
+                    </p>
+                </div>
+
+<div class="masterpiece-image">
+    <img src="alex.jpg" alt="Alex Otti Pencil Portrait">
+</div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+    
+    
+
+</section>
+    
+    
+
+    <section class="contact reveal" id="contact">
+        <div class="container">
+            <span class="small-tag">START A PROJECT</span>
+            <h2 class="section-title">Ready to Transform Your <br>Ideas into Art?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am always open to new challenges and creative collaborations. Whether you want a single portrait for your home or a series of illustrations for a commercial project, I am ready to bring my expertise to your vision.</p>
+                    <p>
+                        <strong>Email Inquiries:</strong> greatgodezekiel123@gmail.com<br>
+                        <strong>Direct Line:</strong> +234 7043205587<br>
+                        <strong>Studio Location:</strong> Nigeria (Shipping Globally)
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <h3>Ezekiel Pencil Art</h3>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="copyright">© 2026 Ezekiel Pencil Art. Handcrafted Excellence. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- FLOATING WHATSAPP BUTTON -->
+
+<a href="https://wa.me/2347043205587"
+   class="floating-whatsapp"
+   target="_blank">
+
+    <i class="fab fa-whatsapp"></i>
+
+</a>
+    
+    
+    
+<script>
+
+/* =========================
+   COUNTER ANIMATION
+========================= */
+
+const counters = document.querySelectorAll('.counter');
+
+function runCounter(counter) {
+
+    counter.innerText = "0";
+
+    const target = +counter.getAttribute('data-target');
+
+    const increment = target / 100;
+
+    const updateCounter = () => {
+
+        let current = +counter.innerText;
+
+        if (current < target) {
+
+            counter.innerText = Math.ceil(current + increment);
+
+            setTimeout(updateCounter, 20);
+
+        } else {
+
+            counter.innerText =
+                target + (target < 100 ? "+" : "%");
+        }
+    };
+
+    updateCounter();
+}
+
+/* =========================
+   STATS OBSERVER
+========================= */
+
+const statsSection = document.querySelector('.stats');
+
+const statsObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            counters.forEach(counter => {
+
+                runCounter(counter);
+
+            });
+
+        } else {
+
+            counters.forEach(counter => {
+
+                counter.innerText = "0";
+
+            });
+
+        }
+    });
+
+}, {
+    threshold: 0.5
+});
+
+statsObserver.observe(statsSection);
+
+
+
+/* =========================
+   SCROLL REVEAL ANIMATION
+========================= */
+
+const reveals = document.querySelectorAll('.reveal');
+
+const revealOnScroll = () => {
+
+    const windowHeight = window.innerHeight;
+
+    reveals.forEach(reveal => {
+
+        const revealTop = reveal.getBoundingClientRect().top;
+
+        const revealPoint = 120;
+
+        if (revealTop < windowHeight - revealPoint) {
+
+            reveal.classList.add('active');
+
+        } else {
+
+            reveal.classList.remove('active');
+
+        }
+
+    });
+};
+
+window.addEventListener('scroll', revealOnScroll);
+
+window.addEventListener('load', revealOnScroll);
+
+/* =========================
+   COUNTER OBSERVER
+========================= */
+
+const observerOptions = {
+    threshold: 0.5
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            startCounters();
+
+            observer.unobserve(entry.target);
+        }
+
+    });
+
+}, observerOptions);
+
+observer.observe(document.querySelector('.stats'));
+
+</script>

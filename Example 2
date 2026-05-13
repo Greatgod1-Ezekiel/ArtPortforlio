@@ -1,0 +1,2155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezekiel Pencil Art | Gallery & Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #ffffff;
+            --text-dim: #b3b3b3;
+            --accent: #d4af37;
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* TOP NAVBAR BRANDING */
+        .nav-brand {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 12px;
+            color: var(--text-main);
+            z-index: 10;
+        }
+
+        .small-tag {
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 0.75rem;
+        }
+
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+            line-height: 1.2;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+        }
+
+        .btn.primary { background: var(--text-main); color: #000; }
+
+        /* GALLERY HEADER (LEFT ALIGNED) */
+        .gallery-header {
+            text-align: left;
+            padding: 160px 20px 80px;
+            background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4)), url('ba.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .main-heading {
+            font-family: var(--font-heading);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .header-para {
+            max-width: 600px;
+            color: var(--text-dim);
+            font-size: 1.1rem;
+        }
+
+        /* ABOUT ME SECTION (LEFT ALIGNED) */
+        .about-me {
+            background: #161616;
+            padding: 100px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-me-img {
+            width: 100%;
+            height: 500px;
+            background: #252525;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .about-me-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-content {
+            text-align: left;
+        }
+
+        .about-content p {
+            margin-bottom: 25px;
+            color: var(--text-dim);
+            font-size: 12px;
+            
+            line-height: 1.9;
+        }
+
+        /* CLIENT PHOTOS GRID */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .photo-item {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.4s;
+            
+        }
+
+        .photo-item:hover { transform: translateY(-10px); }
+
+        .photo-item img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 350px;
+        }
+
+@media (max-width: 768px) {
+    .photo-item img {
+            width: 50%;
+            height: 200px;
+            object-fit: cover;
+            margin-left: 90px;
+            margin-top: 30px;
+            border-radius: 350px;
+        }
+}
+
+
+
+        .photo-item span {
+            display: block;
+            padding: 15px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        /* SERVICES SECTION (WHITE BG) */
+        .services-white {
+            background: #ffffff;
+            color: #000000;
+            padding: 100px 0;
+        }
+
+        .services-white .section-title {
+            color: #000000;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .services-flex {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .service-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .service-icon {
+            flex-shrink: 0;
+            width: 70px;
+        }
+
+        .service-icon i {
+            font-size: 3rem;
+            color: #333;
+        }
+
+        .service-text h3 {
+            font-family: var(--font-body);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: 400;
+            color: #444;
+        }
+
+        .service-text p {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        footer {
+    background: #0a0a0a;
+    padding: 25px 0; /* reduced from 60px */
+    text-align: center;
+    border-top: 1px solid #222;
+}
+
+.copyright {
+    color: #f5f5f5; /* brighter white */
+    font-size: 0.8rem;
+}
+
+        @media (max-width: 992px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .about-me-img { height: 350px; order: 2; }
+            .about-content { order: 1; }
+        }
+
+        @media (max-width: 768px) {
+            .service-row { flex-direction: column; text-align: center; align-items: center; }
+            .section-title { font-size: 1.8rem; }
+        }
+        
+        .drawing-stages {
+    background: #161616;
+    padding: 100px 0;
+}
+
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.stage-card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+}
+
+/* Soft faded glow on hover / touch */
+.stage-card:hover,
+.stage-card:active {
+    transform: translateY(-8px);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.25);
+}
+.stage-card:hover,
+.stage-card:active {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.6),
+                0 0 60px rgba(212, 175, 55, 0.4);
+}
+
+
+
+
+.stage-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.stage-card h3 {
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.stage-card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+    
+.materials {
+    position: relative;
+    padding: 100px 0;
+    background: url(1313.png) center/cover no-repeat;
+    z-index: 1;
+}
+
+/* dark overlay layer */
+.materials::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)
+    );
+    z-index: -1;
+}
+
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+@media (max-width: 992px) {
+    .materials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .materials-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.material-card {
+    background: #1e1e1e;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+
+
+.material-card h3 {
+    color: var(--accent);
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.material-card p {
+    color: var(--text-dim);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}    
+.timeline {
+    background: #1a1a1a;
+    padding: 100px 0;
+}
+
+.timeline-box {
+    max-width: 800px;
+    margin: 40px auto 0;
+    border-left: 2px solid var(--accent);
+    padding-left: 35px;
+}
+
+/* Each item has strong separation */
+.timeline-item {
+    position: relative;
+    margin-bottom: 80px; /* 👈 BIG SPACE BETWEEN ITEMS */
+}
+
+/* Accent dot */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: -43px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+}
+
+/* YEAR HEADING */
+.timeline-item h3 {
+    color: var(--accent);
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+/* DESCRIPTION */
+.timeline-item p {
+    color: var(--text-dim);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    max-width: 650px;
+}
+    .gallery-slider {
+    background: #ffffff;
+    color: #000;
+    padding: 100px 0;
+}
+
+.gallery-slider .section-title {
+    text-align: center;
+    color: #000;
+}
+
+.slider-box {
+    position: relative;
+    max-width: 700px;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.slide p {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* ARROWS */
+.nav {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 12px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.nav.left { left: 10px; }
+.nav.right { right: 10px; }
+
+.nav:hover {
+    background: var(--accent);
+    color: #000;
+}
+   /* ===== Scroll Reveal Animation ===== */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.9s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}    
+   
+   /* ===== GLOBAL LARGE SCREEN CONTROL ===== */
+@media (min-width: 1200px) {
+
+    .container {
+        max-width: 1200px;
+        padding: 80px 40px;
+    }
+
+    /* Keep all text content centered but not stretched */
+    p {
+        max-width: 800px;
+    }
+
+    /* ===== HEADER ===== */
+    .gallery-header {
+        padding: 200px 0 120px;
+    }
+
+    .gallery-header .container {
+        max-width: 1100px;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about-grid {
+        gap: 80px;
+    }
+
+    .about-content p {
+        font-size: 0.95rem;
+    }
+
+    /* ===== PHOTO GRID ===== */
+    .photo-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+
+    .photo-item img {
+        height: 320px;
+    }
+
+    /* ===== SERVICES ===== */
+    .services-flex {
+        max-width: 900px;
+    }
+
+    .service-text h3 {
+        font-size: 1.6rem;
+    }
+
+    /* ===== DRAWING STAGES ===== */
+    .stages-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* ===== MATERIALS ===== */
+    .materials-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1100px;
+        margin: 40px auto 0;
+    }
+
+    /* ===== TIMELINE ===== */
+    .timeline-box {
+        max-width: 900px;
+    }
+
+    /* ===== SLIDER ===== */
+    .slider-box {
+        max-width: 850px;
+    }
+
+    .slide img {
+        height: 500px;
+    }
+
+    /* ===== CENTER ALIGN MAIN SECTIONS CLEANLY ===== */
+    .section-title {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .small-tag {
+        display: block;
+        text-align: center;
+    }
+}
+   
+   /* ===== PRICING SECTION ===== */
+.pricing-section {
+    background: #000;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.pricing-card {
+    background: #111;
+    max-width: 750px;
+    margin: 50px auto 0;
+    padding: 50px 35px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    transition: 0.4s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.2);
+}
+
+.price-top h3 {
+    color: var(--text-dim);
+    font-size: 1rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.price-top h1 {
+    font-size: clamp(3rem, 7vw, 5rem);
+    color: var(--accent);
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+}
+
+.price-top h1 span {
+    font-size: 2rem;
+}
+
+.price-text {
+    color: var(--text-dim);
+    line-height: 1.9;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.price-features {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.feature {
+    background: #1a1a1a;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+}
+
+.feature i {
+    color: var(--accent);
+    font-size: 1rem;
+}
+
+.feature span {
+    color: #ddd;
+    font-size: 0.9rem;
+}
+    
+   /* ===============================
+   SERVICES SECTION - LARGE SCREENS
+================================== */
+@media (min-width: 992px) {
+
+    .services-flex {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .service-row {
+        background: #f7f7f7;
+        padding: 30px;
+        border-radius: 18px;
+        margin-bottom: 0;
+        align-items: flex-start;
+    }
+
+    .service-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .service-text p {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* ==========================================
+   MATERIALS SECTION - LARGE SCREEN LAYOUT
+========================================== */
+@media (min-width: 1200px) {
+
+    .materials-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        max-width: 1100px;
+        margin: 50px auto 0;
+    }
+
+    .material-card {
+        width: 100%;
+        padding: 40px;
+    }
+
+    .material-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+
+    .material-card p {
+        font-size: 0.97rem;
+        line-height: 1.9;
+    }
+}
+
+
+/* ==========================================
+   GALLERY IMAGE FIX FOR LARGE SCREENS
+========================================== */
+@media (min-width: 1200px) {
+
+    .slider-box {
+        max-width: 1000px;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        max-height: 700px;
+        object-fit: contain;
+        background: #fff;
+        border-radius: 15px;
+    }
+} 
+    
+  /* ==========================================
+   FIX ABOUT IMAGE ON MOBILE
+========================================== */
+@media (max-width: 768px) {
+
+    .about-me-img {
+        height: auto;
+        overflow: hidden;
+        border-radius: 15px;
+    }
+
+    .about-me-img img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+    }
+}
+
+
+/* ==========================================
+   FIX GALLERY IMAGES ON MOBILE
+========================================== */
+@media (max-width: 768px) {
+
+    .slider-box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .slide {
+        padding: 0 10px;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        max-height: 500px;
+        object-fit: contain;
+        border-radius: 15px;
+        background: #fff;
+    }
+}  
+    
+    /* ==========================================
+TESTIMONIALS SECTION
+========================================== */
+.testimonials {
+    position: relative;
+    background-image: url('PRO.png');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    text-align: center;
+    z-index: 1;
+}
+
+/* DARK OVERLAY */
+.testimonials::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75); /* adjust darkness here */
+    z-index: -1;
+}
+
+.testimonial-slider {
+    max-width: 750px;
+    margin: 50px auto 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    padding: 20px;
+}
+
+.testimonial-slide img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 4px solid var(--accent);
+}
+
+.review-text {
+    color: var(--text-dim);
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.testimonial-slide h3 {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* DOTS */
+.testimonial-dots {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #444;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.dot.active {
+    background: var(--accent);
+    transform: scale(1.2);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    .testimonial-slide img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .review-text {
+        font-size: 0.92rem;
+    }
+}
+   .guide-section {
+    background: #ffffff;
+    color: #000;
+    padding: 100px 0;
+}
+
+.guide-section .section-title {
+    color: #000;
+    text-align: center;
+}
+
+.guide-wrapper {
+    max-width: 800px;
+    margin: 50px auto 0;
+}
+
+.guide-item {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+.guide-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.guide-header h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.guide-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-right: 20px;
+}
+
+.guide-content p {
+    color: #555;
+    line-height: 1.8;
+    margin-top: 15px;
+    font-size: 0.95rem;
+} 
+  
+  .commission-section {
+    background: #0f0f0f;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.commission-note {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #aaa;
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.commission-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box.full {
+    grid-column: span 2;
+}
+
+.input-box label {
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: #ccc;
+}
+
+.input-box input,
+.input-box select,
+.input-box textarea {
+    padding: 12px;
+    border: 1px solid #333;
+    background: #111;
+    color: #fff;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9rem;
+}
+
+.input-box input:focus,
+.input-box select:focus,
+.input-box textarea:focus {
+    border-color: var(--accent);
+}
+
+.commission-btn {
+    margin-top: 25px;
+    width: 100%;
+    background: var(--accent);
+    color: #000;
+    font-weight: 700;
+}
+
+.commission-btn:hover {
+    opacity: 0.9;
+}
+ /* ===== MOBILE FIX FOR COMMISSION FORM ===== */
+@media (max-width: 768px) {
+
+    .commission-form {
+        padding: 25px 15px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr; /* stack into one column */
+    }
+
+    .input-box.full {
+        grid-column: span 1; /* prevent forced 2-column span */
+    }
+
+    .input-box input,
+    .input-box select,
+    .input-box textarea {
+        font-size: 0.9rem;
+        width: 100%;
+    }
+
+    .commission-btn {
+        width: 100%;
+    }
+} 
+  .follow-us {
+    background: #0f0f0f;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.follow-text {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    color: #aaa;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+    transition: 0.3s ease;
+    border: 1px solid #222;
+}
+
+.social:hover {
+    transform: translateY(-6px);
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+/* Brand hover colors */
+.social.facebook:hover { color: #1877f2; }
+.social.whatsapp:hover { color: #25D366; }
+.social.instagram:hover { color: #e1306c; }
+.social.tiktok:hover { color: #fff; }
+.social.email:hover { color: #ffcc00; }
+  
+    
+        
+    </style>
+</head>
+<body>
+
+    <div class="nav-brand">EGREATGOD</div>
+
+    <section class="gallery-header reveal">
+        <div class="container">
+            <span class="small-tag" style="color: #fff; opacity: 0.8;">Professional Artist</span>
+            <h1 class="main-heading">Hello, I am Ezekiel GreatGod</h1>
+            <p class="header-para">
+                Hyper realistic portraits are works that remind people of their true beauty and who they really are.
+            </p>
+        </div>
+    </section>
+
+    <section class="about-me reveal">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <span class="small-tag">My Story</span>
+                    <h2 class="section-title">About Me</h2>
+                    <p>
+                        My journey as an artist is defined by a relentless pursuit of perfection and emotional depth. I believe that a portrait is not just a replication of a photograph, but a conversation between the artist and the soul of the subject. Every stroke of my pencil is calculated, every shade of charcoal is intentional, ensuring that the final masterpiece doesn't just capture a likeness, but an essence.
+                    </p>
+                    <p>
+                        With a background rooted in traditional techniques and an eye for modern digital precision, I have spent years mastering the delicate balance between light and shadow. My work aims to preserve moments that matter most, turning fleeting memories into timeless treasures.
+                    </p>
+                    <p>
+                        Based in Nigeria, My process involves deep consultation and meticulous execution, because I understand that behind every commission is a story waiting to be told with clarity and passion.
+                    </p>
+                </div>
+                <div class="about-me-img">
+                    <img src="Gr2.png" alt="Ezekiel GreatGod working on a portrait">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio reveal">
+        <div class="container">
+            <span class="small-tag">Our Community</span>
+            <h2 class="section-title">Photos from my clients</h2>
+            
+            <div class="photo-grid">
+                <div class="photo-item">
+                    <img src="Cr.png" alt="Wedding Portrait">
+                    <span>Gift Portrait</span>
+                </div>
+                <div class="photo-item">
+                    <img src="Gra.jpg" alt="Birthday Gift">
+                    <span>Birthday Portrait</span>
+                </div>
+                <div class="photo-item">
+                    <img src="com.png" alt="Personal Portrait">
+                    <span>Commissioned Portrait</span>
+                </div>
+                <div class="photo-item">
+                    <img src="Gif.jpg" alt="Anniversary Art">
+                    <span>Gift Portrait</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-white reveal">
+        <div class="container">
+            <h2 class="section-title">Services We Provide</h2>
+            
+            <div class="services-flex">
+<div class="service-row">
+    <div class="service-icon">
+        <i class="fa-solid fa-comments"></i>
+    </div>
+
+    <div class="service-text">
+        <h3>Free Consultation</h3>
+        <p>
+            Professional guidance in selecting the perfect reference photo 
+            for a realistic and emotional portrait masterpiece.
+        </p>
+        
+        
+    </div>
+</div>
+                </div>
+
+             <div class="service-row">
+    <div class="service-icon">
+        <i class="fa-solid fa-heart"></i>
+    </div>
+
+    <div class="service-text">
+        <h3>Care</h3>
+        <p>
+            I make sure that you and your loved ones receive the most vivid emotions and impressions from the portrait
+        </p>
+    </div>
+</div>
+                </div>
+
+                <div class="service-row">
+                    <div class="service-icon"><i class="fa-solid fa-thumbs-up"></i></div>
+                    <div class="service-text">
+                        <h3>High quality guarantee</h3>
+                        <p>Thanks to years of experience, I guarantee high quality of the drawing and 100% similarity</p>
+                    </div>
+                </div>
+
+                <div class="service-row">
+                    <div class="service-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <div class="service-text">
+                        <h3>Worldwide delivery</h3>
+                        <p>Safe delivery of your portrait anywhere in the world</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/234XXXXXXXXXX" class="btn primary" style="background: #000; color: #fff;">Get Started Now</a>
+            </div>
+        </div>
+    </section>
+
+
+<section class="drawing-stages reveal">
+    <div class="container">
+        <span class="small-tag">My Process</span>
+        <h2 class="section-title">Stages of My Drawing</h2>
+
+        <div class="stages-grid">
+
+            <div class="stage-card">
+                <img src="st1.png" alt="Sketch Stage">
+                <h3>Sketch</h3>
+                <p>
+                    Every artwork begins with a light and precise sketch where I map out the structure, proportions, and placement of the subject. This stage is the foundation of the entire portrait, ensuring accuracy before any shading begins.
+                </p>
+            </div>
+
+            <div class="stage-card">
+                <img src="stu.png" alt="Shading Stage">
+                <h3>Shadings</h3>
+                <p>
+                    At this stage, I start building depth by carefully layering shadows and mid-tones. This brings life to the drawing, creating contrast and beginning to form realism in the portrait.
+                </p>
+            </div>
+
+            <div class="stage-card">
+                <img src="st3.png" alt="Detailing Stage">
+                <h3>Detailing</h3>
+                <p>
+                    This is where the artwork becomes highly refined. I focus on textures like hair strands, fabric folds, and fine facial features to achieve a hyper-realistic effect.
+                </p>
+            </div>
+
+            <div class="stage-card">
+                <img src="st4.jpg" alt="Finished Work">
+                <h3>Finished Work</h3>
+                <p>
+                    The final stage is where everything comes together. Highlights are balanced, contrast is perfected, and the portrait is polished to deliver a realistic, emotional, and timeless masterpiece.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="materials reveal">
+    <div class="container">
+        <span class="small-tag">Tools & Medium</span>
+        <h2 class="section-title">Materials I Use in My Drawing Process</h2>
+
+        <div class="materials-grid">
+
+            <!-- CHARCOAL -->
+            <div class="material-card">
+                <h3>Charcoal Drawing Materials (Full Breakdown)</h3>
+
+                <p>
+                    Charcoal is one of the most expressive and emotionally powerful mediums I work with.
+                    It allows me to create extreme contrast, soft transitions, and deep realism that feels almost photographic.
+                    My charcoal process is not random — it is controlled through different grades and forms of charcoal, each with a specific purpose.
+                </p>
+
+                <p>
+                    <b>Vine Charcoal (Soft Light Base):</b><br><br>
+                    Vine charcoal is the lightest form of charcoal and is made from burnt wood sticks.
+                    It is extremely soft, dusty, and easy to erase, which makes it perfect for early construction.
+                    I use it in the beginning stage of every portrait to map out proportions, facial structure, and positioning.
+                    It allows me to sketch freely without damaging the paper or committing to permanent marks.
+                    It also helps me adjust mistakes easily while building the foundation of the drawing.
+                </p>
+
+                <p>
+                    <b>Compressed Charcoal (Deep Darkness & Contrast):</b><br><br>
+                    Compressed charcoal is much darker, denser, and more permanent than vine charcoal.
+                    It is made by compressing powdered charcoal into solid sticks.
+                    I use it for building deep shadows such as hair mass, eye sockets, nostrils, and background dark areas.
+                    This material is responsible for dramatic contrast and strong visual depth.
+                    However, it must be controlled carefully because it is difficult to erase once applied.
+                </p>
+
+                <p>
+                    <b>Charcoal Pencils (Precision & Detail Control):</b><br><br>
+                    Charcoal pencils are my main detailing tool.
+                    Unlike loose charcoal, they are encased in wood and can be sharpened into fine points.
+                    I use them for eyelashes, eyebrow strands, lip textures, wrinkles, and hair strands.
+                    They allow me to switch between soft shading and sharp detailing with full control.
+                </p>
+
+                <p>
+                    <b>Soft Charcoal (Mid Tone Blending):</b><br><br>
+                    Soft charcoal is used for smooth mid-tone transitions.
+                    It helps in areas like cheeks, neck, and skin shading where harsh lines must be avoided.
+                    It is essential for building natural-looking skin gradients.
+                </p>
+
+                <p>
+                    <b>Extra Soft Charcoal (Smooth Realism Layer):</b><br><br>
+                    This is the lightest controlled charcoal tone.
+                    It is used to create ultra-soft shading and skin-like smoothness.
+                    It helps simulate natural lighting on skin surfaces.
+                </p>
+
+                <p>
+                    <b>Blending Stumps, Tissue & Cotton:</b><br><br>
+                    These are essential for achieving realism.
+                    Blending stumps smooth graphite and charcoal into the paper surface.
+                    Tissue and cotton are used for larger blending areas like cheeks and backgrounds.
+                    They remove harsh transitions and create cinematic smooth shading.
+                </p>
+
+                <p>
+                    <b>Kneaded Eraser:</b><br><br>
+                    This is not just an eraser but a drawing tool.
+                    I use it to lift charcoal gently instead of removing it completely.
+                    It is used for highlights in eyes, skin reflections, and light edges in hair.
+                </p>
+            </div>
+
+
+            <!-- GRAPHITE -->
+            <div class="material-card">
+                <h3>Graphite Pencil Range (3H – 14B Full Explanation)</h3>
+
+                <p>
+                    Graphite is the backbone of structured realism in my drawings.
+                    I use a full range from very hard (3H) to extremely soft (14B).
+                    Each pencil plays a unique role in building depth, structure, and realism.
+                </p>
+
+                <p>
+                    <b>Hard Pencils (3H, 2H, H):</b><br><br>
+                    These are very light pencils used for initial sketching.
+                    They help construct proportions, facial structure, and guidelines.
+                    They are clean, precise, and do not smudge easily.
+                </p>
+
+                <p>
+                    <b>HB Pencil (Neutral Base):</b><br><br>
+                    HB is the balance point between hard and soft graphite.
+                    It is used for refining sketches and light shading transitions.
+                </p>
+
+                <p>
+                    <b>Soft Graphite (2B, 3B, 4B):</b><br><br>
+                    These are the most commonly used pencils in my work.
+                    2B is for light shading, 3B for mid tones, and 4B for deeper shadows.
+                    They create smooth skin textures and natural realism.
+                </p>
+
+                <p>
+                    <b>Dark Graphite (5B, 6B, 7B):</b><br><br>
+                    These pencils are used for strong shadows and contrast areas.
+                    They are applied in hair, facial depth, and background dark zones.
+                </p>
+
+                <p>
+                    <b>Very Dark Graphite (8B – 10B):</b><br><br>
+                    These create deep shadows and focal contrast.
+                    They help push realism and depth in key portrait areas.
+                </p>
+
+                <p>
+                    <b>Extreme Graphite (11B – 14B):</b><br><br>
+                    These are the darkest graphite tones.
+                    They are used sparingly for the deepest blacks in hair, pupils, and dramatic shadows.
+                </p>
+
+                <p>
+                    <b>Monozero Mechanical Pencil System:</b><br><br>
+                    The Monozero is a precision detailing tool used for ultra-fine lines.
+                    It allows me to draw extremely thin strokes that normal pencils cannot achieve.
+                    I use it for eyelashes, hair strands, fabric threads, and sharp facial details.
+                    It provides consistent sharpness and does not require constant sharpening,
+                    making it perfect for hyper-realistic detailing work.
+                </p>
+
+                <p>
+                    <b>Blending Tools:</b><br><br>
+                    Blending stumps, cotton buds, and soft brushes are used to smooth graphite layers.
+                    They help create seamless skin textures and remove harsh pencil marks.
+                </p>
+
+                <p>
+                    <b>Erasers:</b><br><br>
+                    Both rubber and kneaded erasers are used for correction and highlighting.
+                    They help create light reflections in eyes, nose, and skin highlights.
+                </p>
+            </div>
+
+
+            <!-- BRUSHES -->
+            <div class="material-card">
+                <h3>Brushes & Physical Drawing Tools</h3>
+
+                <p>
+                    Brushes are essential for controlling texture, dust, and smoothness in my artwork.
+                </p>
+
+                <p>
+                    <b>Soft Large Brushes:</b><br><br>
+                    Used to remove excess charcoal or graphite dust without damaging the artwork.
+                </p>
+
+                <p>
+                    <b>Medium Brushes:</b><br><br>
+                    Used for controlled blending of mid-tone areas like skin and backgrounds.
+                </p>
+
+                <p>
+                    <b>Fine Detail Brushes:</b><br><br>
+                    Used for lifting highlights and refining edges in eyes, lips, and hair strands.
+                </p>
+            </div>
+
+
+            <!-- PAPER -->
+            <div class="material-card">
+                <h3>Paper Type (Needle Point Textured Paper)</h3>
+
+                <p>
+                    I use high-quality needle point textured paper for all my drawings.
+                    This paper has a slightly rough surface that holds charcoal and graphite effectively.
+                </p>
+
+                <p>
+                    The texture allows multiple layers of shading without damaging the surface.
+                    It enhances realism by breaking smooth shading slightly, making the artwork more natural.
+                </p>
+
+                <p>
+                    It is ideal for hyper-realistic portraits where gradual layering is very important.
+                </p>
+            </div>
+
+
+            <!-- DIGITAL -->
+            <div class="material-card">
+                <h3>Digital Drawing (ibis Paint X - Full Workflow)</h3>
+
+                <p>
+                    For digital artwork, I use ibis Paint X, a powerful mobile drawing application.
+                    It allows me to replicate traditional drawing techniques digitally.
+                </p>
+
+                <p>
+                    The most important feature is the layer system.
+                    I separate sketch, shading, detailing, and highlights into different layers for full control.
+                </p>
+
+                <p>
+                    I use custom brushes that mimic graphite and charcoal textures.
+                    This helps maintain my traditional drawing style in digital form.
+                </p>
+
+                <p>
+                    Blending tools in ibis Paint X help smooth tones just like real blending stumps.
+                </p>
+
+                <p>
+                    I use digital drawing for sketches, client previews, corrections, and final polished artwork.
+                </p>
+
+                <p>
+                    Overall, ibis Paint X gives me speed, precision, and flexibility while maintaining realism.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section class="timeline reveal">
+    <div class="container">
+        <span class="small-tag">My Journey</span>
+        <h2 class="section-title">Mini Bio Timeline</h2>
+
+        <div class="timeline-box">
+
+            <div class="timeline-item">
+                <h3>2023 — Started Pencil Art</h3>
+                <p>
+                    This was the beginning of my artistic journey. I started exploring pencil drawing, learning proportions, shading, and the basics of realism. It was a phase of practice, mistakes, and improvement that built my foundation.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>2024 — Started Taking Commissioned Drawing</h3>
+                <p>
+                    I began receiving my first client requests. This stage helped me understand professionalism, client satisfaction, deadlines, and how to turn passion into service-based art.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>2025 — Expanded Into Digital Drawing</h3>
+                <p>
+                    I moved into digital art using ibis Paint X. This allowed me to combine traditional realism with digital flexibility, improving speed, precision, and creative experimentation.
+                </p>
+            </div>
+
+            <div class="timeline-item">
+                <h3>2026 — Built Professional Art Brand</h3>
+                <p>
+                    I established myself as a professional pencil artist under Ezekiel Pencil Art, focusing on hyper-realistic portraits, global clients, and a structured art identity.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="gallery-slider reveal">
+    <div class="container">
+        <span class="small-tag">My Works</span>
+        <h2 class="section-title">Gallery Showcase</h2>
+
+        <p class="gallery-note">
+            Sample of drawings I've made. No Ai, No computer imaging. Just hand drawn with care.<br>
+            Each portrait is based on reference photo provided or available. <br>
+        </p>
+
+        <div class="slider-box">
+
+            <button class="nav left" onclick="moveSlide(-1)">
+                <i class="fa-solid fa-angle-left"></i>
+            </button>
+
+            <div class="slider-wrapper">
+
+                <div class="slide active">
+                    <img src="OTTI.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="GRACE.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="KAMSY.png" alt="">
+                    <p>Digital Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="STEVE.png" alt="">
+                    <p>Digita Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="FRANK.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="CHRISTEL.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="MONICA.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="RACHAEL.png" alt="">
+                    <p>Digital Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="WILL.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="MAN.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="WF.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="IGWE.jpg" alt="">
+                    <p>Digital Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="FRED2.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="THEO.png" alt="">
+                    <p>Digital Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="KAMSY3.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="OBA.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="DEBBIE.png" alt="">
+                    <p>Digital Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="SHARON.png" alt="">
+                    <p>Digital Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="SARAH.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="GIFT.png" alt="">
+                    <p>Pencil Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="MOSES.png" alt="">
+                    <p>Digital Portrait</p>
+                </div>
+
+                <div class="slide">
+                    <img src="DONALD.png" alt="">
+                    <p>Digital Portrait</p>
+                </div>
+
+
+
+
+
+            </div>
+
+            <button class="nav right" onclick="moveSlide(1)">
+                <i class="fa-solid fa-angle-right"></i>
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<section class="pricing-section reveal">
+    <div class="container">
+
+        <span class="small-tag">Pricing</span>
+        <h2 class="section-title">Portrait Pricing</h2>
+
+        <div class="pricing-card">
+
+            <div class="price-top">
+                <h3>Hyper Realistic Portrait</h3>
+                <h1>₦50,000<span>+</span></h1>
+            </div>
+
+            <p class="price-text">
+                My hand-drawn hyper realistic portraits start from 
+                <strong>₦50,000</strong>. 
+                Pricing depends on the portrait size, number of subjects, level of detailing, 
+                background complexity, and delivery requirements.
+            </p>
+
+            <p class="price-text">
+                Every artwork is created with patience, precision, and emotional depth 
+                to deliver a timeless masterpiece that feels personal and unforgettable.
+            </p>
+
+            <div class="price-features">
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    <span>100% Hand Drawn</span>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    <span>High Detail Realism</span>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Worldwide Delivery Available</span>
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-check"></i>
+                    <span>Client Satisfaction Priority</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 35px;">
+                <a href="https://wa.me/234XXXXXXXXXX" class="btn primary">
+                    Book a Portrait
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="guide-section">
+    <div class="container">
+
+        <span class="small-tag">Guide</span>
+        <h2 class="section-title">Helpful Guide for Your Portrait</h2>
+
+        <div class="guide-wrapper">
+
+            <!-- ITEM 1 -->
+            <div class="guide-item">
+                <div class="guide-header" onclick="toggleGuide(this)">
+                    <h3>Choosing the right photo for your portrait</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="guide-content">
+                    <p>
+                        The quality of your portrait depends heavily on the reference photo you provide. 
+                        A clear, high-resolution image allows me to capture the finest details such as 
+                        facial expressions, eye reflections, hair texture, and skin tone variations.
+                    </p>
+                    <p>
+                        Avoid blurry, dark, or heavily filtered images because they reduce accuracy and realism. 
+                        The best photos are well-lit, taken in natural light, and show the face clearly without shadows covering important areas.
+                    </p>
+                    <p>
+                        If possible, choose a photo where the subject is looking directly at the camera. 
+                        This helps create stronger emotional connection in the final artwork and ensures facial symmetry is properly captured.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ITEM 2 -->
+            <div class="guide-item">
+                <div class="guide-header" onclick="toggleGuide(this)">
+                    <h3>Choosing the right size for your portrait</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="guide-content">
+                    <p>
+                        The size of your portrait determines the level of detail and visual impact. 
+                        Smaller sizes are perfect for simple gifts, while larger sizes allow for extreme realism and finer detailing.
+                    </p>
+                    <p>
+                        If you want highly detailed work such as visible skin textures, individual hair strands, or complex backgrounds, 
+                        larger paper sizes like A3 or A2 are recommended.
+                    </p>
+                    <p>
+                        For budget-friendly or simple portraits, A4 size works well, especially for single subjects with minimal background. 
+                        Always consider where the artwork will be displayed before choosing a size—bedroom walls, living rooms, or office spaces may require larger frames.
+                    </p>
+                </div>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="guide-item">
+                <div class="guide-header" onclick="toggleGuide(this)">
+                    <h3>How to frame your pencil portrait</h3>
+                    <span class="icon">+</span>
+                </div>
+                <div class="guide-content">
+                    <p>
+                        Framing is very important because it protects your artwork and enhances its beauty. 
+                        A well-framed portrait not only preserves the drawing from dust and moisture but also gives it a professional, gallery-like appearance.
+                    </p>
+                    <p>
+                        It is recommended to use a glass frame to protect the pencil drawing from smudging. 
+                        Always include a small white or black border (mounting) between the artwork and the frame to make it stand out visually.
+                    </p>
+                    <p>
+                        Avoid placing framed portraits under direct sunlight or humid environments, as this may affect the quality of the paper over time. 
+                        Proper framing ensures your artwork lasts for many years as a timeless memory.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- =========================
+TESTIMONIALS SECTION
+ADD THIS BEFORE <footer>
+========================= -->
+<section class="testimonials reveal">
+    <div class="container">
+
+        <span class="small-tag">Testimonials</span>
+        <h2 class="section-title">What Clients Say</h2>
+
+        <div class="testimonial-slider">
+
+            <div class="testimonial-wrapper">
+
+                <!-- SLIDE 1 -->
+                <div class="testimonial-slide active">
+                    <img src="SA.jpg" alt="">
+                    <p class="review-text">
+                        “I was honestly shocked when I saw the final drawing.
+                        The detailing, the emotions, and the realism were beyond what I imagined.”
+                    </p>
+                    <h3>— Sarah Lawal</h3>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="testimonial-slide">
+                    <img src="JERE.jpg" alt="">
+                    <p class="review-text">
+“The portrait came out incredibly realistic. The attention to detail in the facial features and shading was outstanding. It exceeded expectations.”
+                    </p>
+                    <h3>— Jede Jeremiah</h3>
+                </div>
+
+                <!-- SLIDE 3 -->
+                <div class="testimonial-slide">
+                    <img src="DAN.jpg" alt="">
+                    <p class="review-text">
+                        “Extremely talented artist. Communication was smooth
+                        and delivery was professional.”
+                    </p>
+                    <h3>— Chibuzor Daniel</h3>
+                </div>
+
+                <!-- SLIDE 4 -->
+                <div class="testimonial-slide">
+                    <img src="ESTHER.jpg" alt="">
+                    <p class="review-text">
+                        “The realism is insane. Every little detail was captured perfectly.”
+                    </p>
+                    <h3>— Esther Kalu</h3>
+                </div>
+
+                <!-- SLIDE 5 -->
+                <div class="testimonial-slide">
+                    <img src="IKIKE.jpg" alt="">
+                    <p class="review-text">
+                        “One of the best portrait artists I’ve worked with.
+                        Highly recommended.”
+                    </p>
+                    <h3>-Ikike Enang</h3>
+                </div>
+
+                <!-- SLIDE 6 -->
+                <div class="testimonial-slide">
+                    <img src="VIC.jpg" alt="">
+                    <p class="review-text">
+“Very impressive artwork. The drawing captured depth, emotion, and fine details perfectly. It looks almost like a photograph.”
+                    </p>
+                    <h3>— Victor Chijioge</h3>
+                </div>
+
+                <!-- SLIDE 7 -->
+                <div class="testimonial-slide">
+                    <img src="AMA.jpg" alt="">
+                    <p class="review-text">
+                        “Very patient, talented, and professional.
+                        The final result was amazing.”
+                    </p>
+                    <h3>— Orji Amarachi</h3>
+                </div>
+                
+                            <div class="testimonial-slide">
+                    <img src="KAM.jpg" alt="">
+                    <p class="review-text">
+“High level of professionalism and skill. The shading techniques and texture work made the portrait very lifelike and detailed.”
+                    </p>
+                    <h3>— Kamsy Israel</h3>
+                </div>  
+                
+                            <div class="testimonial-slide">
+                    <img src="DES.jpg" alt="">
+                    <p class="review-text">
+“The quality of work is exceptional. Every part of the drawing shows patience and precision. Definitely one of the best pencil artworks I’ve seen.”
+                    </p>
+                    <h3>— Destiny Kalu</h3>
+                </div>
+                
+                            <div class="testimonial-slide">
+                    <img src="CHR.jpg" alt="">
+                    <p class="review-text">
+“Amazing realism and smooth detailing. The final piece looked clean, sharp, and very well balanced in terms of light and shadow.”
+                    </p>
+                    <h3>— Christel</h3>
+                </div>    
+                
+                
+                
+
+            </div>
+
+            <!-- DOTS -->
+            <div class="testimonial-dots">
+                <span class="dot active" onclick="goToTestimonial(0)"></span>
+                <span class="dot" onclick="goToTestimonial(1)"></span>
+                <span class="dot" onclick="goToTestimonial(2)"></span>
+                <span class="dot" onclick="goToTestimonial(3)"></span>
+                <span class="dot" onclick="goToTestimonial(4)"></span>
+                <span class="dot" onclick="goToTestimonial(5)"></span>
+                <span class="dot" onclick="goToTestimonial(6)"></span>
+                <span class="dot" onclick="goToTestimonial(7)"></span>
+                <span class="dot" onclick="goToTestimonial(8)"></span>
+                <span class="dot" onclick="goToTestimonial(9)"></span>
+                
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="commission-section">
+    <div class="container">
+
+        <span class="small-tag">Commission</span>
+        <h2 class="section-title">Request Your Portrait</h2>
+
+        <p class="commission-note">
+            Fill in the form below to commission a custom hyper-realistic portrait. 
+            I will review your request and respond as soon as possible.
+        </p>
+
+        <form class="commission-form" onsubmit="sendCommission(event)">
+
+            <div class="form-grid">
+
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+
+                <div class="input-box">
+                    <label>WhatsApp Number</label>
+                    <input type="tel" id="phone" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Email (Optional)</label>
+                    <input type="email" id="email">
+                </div>
+
+                <div class="input-box">
+                    <label>Portrait Size</label>
+                    <select id="size" required>
+                        <option value="">Select Size</option>
+                        <option>A4</option>
+                        <option>A3</option>
+                        <option>A2</option>
+                        <option>Custom Size</option>
+                    </select>
+                </div>
+
+                <div class="input-box full">
+                    <label>Description of Request</label>
+                    <textarea id="message" rows="6" placeholder="Tell me about your portrait (number of people, background, special details, etc)" required></textarea>
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn primary commission-btn">
+                Send Request
+            </button>
+
+        </form>
+
+    </div>
+</section>
+
+<section class="follow-us">
+    <div class="container">
+
+        <span class="small-tag">Follow Us</span>
+        <h2 class="section-title">Connect With Me</h2>
+
+        <p class="follow-text">
+            Let’s stay connected across all platforms for updates, new artworks, and behind-the-scenes.
+        </p>
+
+        <div class="social-icons">
+
+            <a href="https://www.facebook.com/profile.php?id=61585109617625" target="_blank" class="social facebook">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://wa.me/2347043205587" target="_blank" class="social whatsapp">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.instagram.com/greatgodezekiel?igsh=NzM2cWFjejM3b3Nn" target="_blank" class="social instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://vm.tiktok.com/ZS9FgpvKMjar9-jjGcc/" target="_blank" class="social tiktok">
+                <i class="fa-brands fa-tiktok"></i>
+            </a>
+
+            <a href="mailto:greatgodezekiel123@gmail.com" class="social email">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+    <footer>
+        <div class="container">
+            <p class="copyright">© 2026 Ezekiel Pencil Art. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* ===== Gallery Slider ===== */
+    let index = 0;
+
+    window.moveSlide = function(step) {
+        const slides = document.querySelectorAll(".slide");
+        const wrapper = document.querySelector(".slider-wrapper");
+
+        index += step;
+
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+
+        wrapper.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    /* ===== Scroll Reveal ===== */
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    reveals.forEach(section => observer.observe(section));
+
+});
+
+/* ===== TESTIMONIAL SLIDER ===== */
+let testimonialIndex = 0;
+
+const testimonialWrapper = document.querySelector(".testimonial-wrapper");
+const testimonialSlides = document.querySelectorAll(".testimonial-slide");
+const dots = document.querySelectorAll(".dot");
+
+window.goToTestimonial = function(index) {
+    testimonialIndex = index;
+    updateTestimonials();
+};
+
+function updateTestimonials() {
+
+    testimonialWrapper.style.transform =
+        `translateX(-${testimonialIndex * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+
+    dots[testimonialIndex].classList.add("active");
+}
+
+/* AUTO SLIDE */
+setInterval(() => {
+
+    testimonialIndex++;
+
+    if (testimonialIndex >= testimonialSlides.length) {
+        testimonialIndex = 0;
+    }
+
+    updateTestimonials();
+
+}, 4000);
+
+function toggleGuide(element) {
+    const content = element.nextElementSibling;
+    const icon = element.querySelector(".icon");
+
+    if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+        icon.textContent = "+";
+    } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+        icon.textContent = "−";
+    }
+}
+
+function sendCommission(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let size = document.getElementById("size").value;
+    let message = document.getElementById("message").value;
+
+    let text = `New Commission Request:
+Name: ${name}
+Phone: ${phone}
+Email: ${email || "Not provided"}
+Size: ${size}
+Message: ${message}`;
+
+    let encodedText = encodeURIComponent(text);
+
+    let whatsappURL = `https://wa.me/2347043205587?text=${encodedText}`;
+
+    window.open(whatsappURL, "_blank");
+}
+
+
+
+</script>
+    
+
+</body>
+</html>
