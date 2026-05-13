@@ -626,6 +626,59 @@
         right: 15px;
     }
 }
+ /* =========================
+   VISITOR COUNTER
+========================= */
+
+.visitor-box{
+    margin-top: 35px;
+    display: inline-block;
+    padding: 25px 45px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(212,175,55,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+    transition: 0.4s ease;
+}
+
+.visitor-box:hover{
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 45px rgba(0,0,0,0.6);
+}
+
+.visitor-box h3{
+    color: var(--accent);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.visitor-box h2{
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 0 15px rgba(212,175,55,0.3);
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    .visitor-box{
+        width: 100%;
+        padding: 20px;
+    }
+
+    .visitor-box h2{
+        font-size: 2.3rem;
+    }
+}
+    
         
         
     </style>
@@ -1049,18 +1102,27 @@
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <h3>Ezekiel Pencil Art</h3>
-            <div class="footer-links">
-                <a href="#">Home</a>
-                <a href="#about">About Me</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <p class="copyright">© 2026 Ezekiel Pencil Art. Handcrafted Excellence. All Rights Reserved.</p>
+<footer>
+    <div class="container">
+        <h3>Ezekiel Pencil Art</h3>
+
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#about">About Me</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
         </div>
-    </footer>
+
+        <div class="visitor-box">
+          <h3><i class="fas fa-eye"></i> Total Visits</h3>
+            <h6 id="visitor-count">Loading...</h6>
+        </div>
+
+        <p class="copyright">
+            © 2026 Ezekiel Pencil Art. Handcrafted Excellence. All Rights Reserved.
+        </p>
+    </div>
+</footer>
     
     <!-- FLOATING WHATSAPP BUTTON -->
 
@@ -1204,6 +1266,12 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, observerOptions);
 
 observer.observe(document.querySelector('.stats'));
+
+fetch("https://api.countapi.xyz/hit/ezekiel-pencil-art/visits")
+.then((res) => res.json())
+.then((data) => {
+    document.getElementById("visitor-count").innerText = data.value;
+});
 
 </script>
 
